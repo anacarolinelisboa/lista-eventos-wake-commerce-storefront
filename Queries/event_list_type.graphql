@@ -1,0 +1,19 @@
+query EventListType($url: String!
+       ) {
+  hotsite (url:$url) {
+    name
+    pageSize    
+    seo {
+      content
+      name
+      type
+      httpEquiv
+      scheme
+    }
+  }
+  eventListType{
+    name
+    logoUrl
+    urlPath
+  }
+}

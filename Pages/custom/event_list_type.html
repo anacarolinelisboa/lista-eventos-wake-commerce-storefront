@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        {{ head title: data.hotsite.name store: store }}
+        {{ data_layer_config common: common }}
+        {{ hotsite_structured_data hotsite: data.hotsite base_url: store.urls.base current_url: store.urls.current }}
+        {{ asset type: "css" paths: ["navbar", "footer", "mini_cart", "user_login", "spot", "product", "output"]}}
+        {{ meta_tags seo: data.hotsite.seo }}
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    </head>
+    <body> 
+        <header id="main-header" class="bg-mainBg fixed z-40 w-full transition-all duration-200 border-b-2 border-[#E8E8E8] top-0"> 
+            {{ header common: common}} 
+        </header>
+        {{ side_cart }}
+        {{ overlay }}  
+        
+        <div class="container mt-12">
+            <p class="flex justify-center items-center md:mb-8 my-6">
+                <a href="/" class="text-xs text-[#747474]">Página Inicial</a>
+                <svg class="mx-4" width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5H8M8 5L4.44355 1M8 5L4.44355 9" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <strong class="text-xs">{{data.hotsite.name}}</strong>
+            </p> 
+            <h1 class="text-center font-light text-3xl md:text-[41px] mt-6 mb-4 md:mb-14">{{data.hotsite.name}}</h1> 
+
+            <div class="px-4 grid grid-cols-1 md:grid-cols-2 gap-5">
+                {{for dt in data.event_list_type}} 
+                    <div class="event_item border border-[#E8E8E8] p-6 flex justify-between items-center" data-name="{{dt.name}}">
+                        <img src="{{dt.logo_url}}" alt="{{dt.name}}" height="180" width="180" class="hidden md:block rounded-full border border-[#E8E8E8]">
+                        <img src="{{dt.logo_url}}" alt="{{dt.name}}" height="120" width="120" class="md:hidden rounded-full border border-[#E8E8E8]">
+                        <div class="w-[calc(100%-150px)] md:w-[calc(100%-220px)]">
+                            <h2 class="text-xl md:text-2xl mb-4 font-light">{{dt.name}}</h2>
+                            <a href="/lista-eventos/{{dt.url_path}}" class="my-2 border-[#333333] hover:text-white hover:bg-[#333333] text-[#333333] transition-all duration-200 border rounded-full text-sm py-1 w-32 uppercase text-center block">Ver evento</a>
+                        </div>
+                    </div>  
+                {{end}} 
+            </div>
+        </div>  
+        
+        {{ footer is_preview: is_preview store: store }}
+        {{ sdk_client }}
+        {{ asset type: "js" paths: ["components", "navbar", "product", "mini_cart", "user_login"]}} 
+    </body>
+</html>
