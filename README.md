@@ -3,11 +3,15 @@
 * Exibição de lista de eventos (Ex.: Lista de casamento, lista de aniversário...);
 * Exibição das listas feitas pelos usuários em X evento e busca simples via JS. (Listas de casamentos feitas pelos usuários no evento "Lista de casamento" por exemplo.)
 
+![Listas de eventos](/Tutoriais/lista-de-eventos.png)
+
+![Listas de casamentos](/Tutoriais/listas-de-casamento.png)
+
 ______________
 
 É necessário criar uma rota em Hotsites para cada evento. Para exibir as listas de eventos, foi criado a rota "lista-eventos". Para exibir listas do evento, por exemplo casamentos, foi criado a rota "lista-eventos/lista-de-casamento".
 
-<img src="">
+![Lista de rotas de Hotsites](/Tutoriais/rotas-em-hotsites.png)
 
 Após criar os Hotsites no painel, adicione-as no seu tema em pages.json. Nas customs de "hotsite":
 
@@ -19,6 +23,7 @@ Após criar os Hotsites no painel, adicione-as no seu tema em pages.json. Nas cu
     "query": "event_list_type.graphql"
 }, 
 ```
+
 
 **"lista-eventos/*"** que irá exibir as listas do evento (criadas pelos usuários). É usado "*" para aplicar a qualquer rota que tenha "lista-eventos/" antes:
 ```
@@ -36,5 +41,5 @@ ______________
 Obs: para estilização, foi usado Tailwind CSS.
 
 ### links úteis:
-https://wakecommerce.readme.io/docs/eventlists
-https://wakecommerce.readme.io/docs/eventlisttype
+* https://wakecommerce.readme.io/docs/eventlists
+* https://wakecommerce.readme.io/docs/eventlisttype
