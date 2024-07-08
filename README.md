@@ -1,17 +1,16 @@
 # Lista de eventos na plataforma Wake Commerce, Storefront
 
 * Exibição de lista de eventos (Ex.: Lista de casamento, lista de aniversário...);
-* Exibição das listas feitas pelos usuários em X evento e busca simples via JS. (Listas de casamentos feitas pelos usuários no evento "Lista de casamento" por exemplo.)
+<img src="/Tutoriais/lista-de-eventos.png" alt="Listas de eventos" width="700" style="max-width: 100%;">
 
-![Listas de eventos](/Tutoriais/lista-de-eventos.png)
-
-![Listas de casamentos](/Tutoriais/listas-de-casamento.png)
+* Exibição das listas feitas pelos usuários em X evento e busca simples via JS. (Listas de casamentos feitas pelos usuários no evento "Lista de casamento" por exemplo.) 
+<img src="/Tutoriais/listas-de-casamento.png" alt="Listas de casamentos" width="700" style="max-width: 100%;"> 
 
 ______________
 
 É necessário criar uma rota em Hotsites para cada evento. Para exibir as listas de eventos, foi criado a rota "lista-eventos". Para exibir listas do evento, por exemplo casamentos, foi criado a rota "lista-eventos/lista-de-casamento".
 
-![Lista de rotas de Hotsites](/Tutoriais/rotas-em-hotsites.png)
+<img src="/Tutoriais/rotas-em-hotsites.png" alt="Lista de rotas de Hotsites" width="700" style="max-width: 100%;">  
 
 Após criar os Hotsites no painel, adicione-as no seu tema em pages.json. Nas customs de "hotsite":
 
