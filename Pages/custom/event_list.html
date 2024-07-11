@@ -34,7 +34,7 @@
                                 <div class="w-[calc(100%-150px)] md:w-[calc(100%-220px)]">
                                     <h2 class="text-xl md:text-2xl mb-2 font-light">{{dt.name}}</h2>
                                     <p class="text-sm mb-4 font-light">Em {{ date.parse dt.date | date.to_string '%d de %B, %Y' culture:'pt-BR' }}</p>
-                                    <a href="/eventos/{{dt.url}}" class="my-2 border-[#333333] hover:text-white hover:bg-[#333333] text-[#333333] transition-all duration-200 border rounded-full text-sm py-1 font-semibold w-32 uppercase text-center block">ver lista</a>
+                                    <a href="{{dt.url}}" class="my-2 border-[#333333] hover:text-white hover:bg-[#333333] text-[#333333] transition-all duration-200 border rounded-full text-sm py-1 font-semibold w-32 uppercase text-center block">ver lista</a>
                                 </div>
                             </div>   
                         {{end}} 
